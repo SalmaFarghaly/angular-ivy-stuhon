@@ -58,7 +58,7 @@ export class ProfileComponent implements OnInit {
       }
     else
       {
-        this.duplicateSkill=fals;
+        this.duplicateSkill=false;
         if(this.firstName.length>=2&&this.firstName.length<=20&&this.lastName.length>=2&&this.lastName.length<=20){
           localStorage.setItem('firstName',this.firstName)
           localStorage.setItem('lastName',this.lastName)

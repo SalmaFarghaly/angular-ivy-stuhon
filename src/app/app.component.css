@@ -39,8 +39,21 @@ header {
     padding-left: 15%;
     padding-right: 19%;  
 }
-/* @media only screen and (max-width:400px){
+@media only screen and (max-width:500px){
   .logo{
-    width: 100px;
+    width: 150px;
   }
-} */
+  header{
+    padding-left: 15%;
+    padding-right: 15%; 
+
+  }
+  .container{
+    padding-top: 1.5em;
+  }
+  ul li a{
+    padding-left: 20px;
+    font-size: 0.7em;
+
+  }
+}

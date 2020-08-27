@@ -134,6 +134,10 @@
     .first h1{
       font-size: 2em;
     }
+     first{
+    text-align: left;
+    padding-top: 15%;
+  }
     .secondParagraph{
       font-size:0.9em;
       margin-bottom: 10px;
@@ -153,5 +157,37 @@
       height:2em;
       font-size:20px;
     }
+
+    @media only screen and (max-width:500px){
+    .firstParagraph{
+        font-size: 0.5em;
+    }
+    .man{
+      width:40%;
+    }
+    .first h1{
+      font-size: 1.1em;
+    }
+    .secondParagraph{
+      font-size:0.4em;
+      margin-bottom: 10px;
+    }
+    .thirdDiv h1{
+      font-size: 0.5em;
+
+    }
+    .mountain{
+      width: 60%;
+    }
+    .subhead{
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+    button{
+      height:2em;
+      font-size:15px;
+    }
+    
+  }
 }
   
