@@ -52,7 +52,7 @@ export class ProfileComponent implements OnInit {
 
 
   submit(){
-    //Check if all fields are valid then save them in local storage
+    //save the fields in local storage if all of them are valid
     if(this.firstSkill===this.secondSkill||this.secondSkill===this.thirdSkill||this.firstSkill===this.thirdSkill){
         this.duplicateSkill=true;
         this.validData=false;
