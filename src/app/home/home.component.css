@@ -5,6 +5,7 @@
   
   .container{
     text-align: center;
+    font-family: 'Roboto';
   }
   ul{
     list-style-type: none;
@@ -146,6 +147,7 @@
     }
     .subhead{
       font-size: 1.3em;
+      font-weight: bold;
     }
     button{
       height:2em;
