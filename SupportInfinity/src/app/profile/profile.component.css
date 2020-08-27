@@ -1,0 +1,123 @@
+.big{
+    background-color:#F4F4F7;
+    margin-top:35px;
+    height: 1300px;
+    font-family: 'Roboto';
+}
+label.profile{
+    padding-top:60px;
+    margin-left: 15%;
+    font-size: 2.2em;
+    color: black;
+    font-weight: bold;
+}
+form{
+    width: 70%;
+    box-shadow:none;
+    background: #fff;
+    margin-top:60px;
+    padding-bottom:60px;
+    margin-right:15% ;
+    margin-left: 15%;
+    text-align: left;
+    border-radius: 10px;
+    display:block;
+
+}
+label.title{
+    font-size: 1.7em;
+    color:black;
+    font-weight: bold;
+    padding-top:1.2em;
+    padding-left: 2em;
+}
+label.info{
+    font-size: 1.3em;
+    color:black;
+    font-weight: 400;
+    padding-left: 2.5em;
+
+}
+label.first{
+    padding-top:2em;
+}
+input{
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-left: 2.1em;
+    margin-right: 2.5em;
+    margin-top: 1em;
+    width: 87%;
+    height: 65px;
+    border-color:#F4F4F7 ;
+    border-style: groove;
+    padding-left: 1.2em;
+}
+span{
+    color: red;
+}
+
+.skill-container-dropdown{
+    position:absolute;
+    z-index: 1;
+    width:500px;
+    max-height:100px;
+    background:#f6f6f6;
+    margin-left: 3.3em;
+    margin-top: -0.8em;
+    overflow-y:auto;   
+}
+.options{
+    padding: 10px;
+    color:black
+}
+.options:hover{
+    color: #0FA572;
+    cursor: pointer;
+}
+input.button{
+    color:white;
+    width:15%;
+    background-color: #0FA572;
+    box-shadow: #F4F4F7;
+    float:right;
+    margin-right:15%;
+    margin-top:70px;
+    margin-bottom:70px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border:none
+}
+
+  .alert {
+    background:white;
+    color:red;
+    padding: 7px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    margin-left: 3.5em;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+}
+
+@keyframes alertAnim {
+    from {
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width:1200px){
+    input.button{
+        font-size: 1.2em;
+    }
+}
+@media only screen and (max-width:800px){
+    input.button{
+        font-size: 1.0em;
+    }
+}
+
+

@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+<div class="big">
+<label class="profile">Profile</label>
+   <form [formGroup]="myForm" >
+      <label class="title">Basic Information</label>
+         
+      <label class="info first">First Name <span>*</span></label>
+         <input type="text" 
+                matInput 
+                placeholder="Your First Name" 
+                [(ngModel)]="firstName"
+                formControlName="FirstName">
+
+         <div class="alert" *ngIf="FirstName.invalid&&(FirstName.dirty||FirstName.touched)" >
+            <div *ngIf="FirstName.errors.required">
+               First Name is required.
+            </div>
+            <div *ngIf="FirstName.errors.minlength">
+               First Name must be at least 2 characters long.
+            </div>
+            <div *ngIf="FirstName.errors.maxlength">
+               First Name must be at most 20 characters long.
+            </div>
+         </div>
+
+ 
+
+      <label class="info">Last Name <span>*</span></label>
+         <input type="text" 
+                matInput 
+                placeholder="Your Last Name" 
+                [(ngModel)]="lastName" 
+               formControlName="LastName">
+        
+         <div class="alert" *ngIf="LastName.invalid&&(LastName.dirty||LastName.touched)" >
+            <div *ngIf="LastName.errors.required">
+               Last Name is required.
+            </div>
+            <div *ngIf="LastName.errors.minlength">
+               Last Name must be at least 2 characters long.
+            </div>
+            <div *ngIf="LastName.errors.maxlength">
+               Last Name must be at most 20 characters long.
+            </div>
+         </div>
+
+        
+         <label class="info">Skill 1 <span>*</span></label>
+            <div clickOutside (clickOutside)="closeDropDown()">
+               <input type="text" 
+                      matInput 
+                      placeholder="Type and select from list"
+                      (click)="toggleDropDown()"
+                      [(ngModel)]="firstSkill"
+                     formControlName="FirstSkill" >
+
+               <div *ngIf="showDropDown" class="skill-container-dropdown">
+                  <div class="options" (click)="selectValue(option)" *ngFor="let option of options |searchFilter: getSearchValue()">
+                     {{option}}
+                  </div>
+               </div>   
+            </div>
+
+            <div class="alert" *ngIf="FirstSkill.dirty||FirstSkill.touched" >
+               <div *ngIf="FirstSkill.invalid">
+                  Skill 1 is required.
+               </div>
+            </div>
+
+
+         <label class="info">Skill 2 <span>*</span></label>
+            <div clickOutside (clickOutside)="closeSecondDropDown()">
+               <input type="text" 
+                      matInput 
+                      placeholder="Type and select from list"
+                      (click)="toggleSecondDropDown()"
+                      [(ngModel)]="secondSkill"
+                      formControlName="SecondSkill" >
+             <div *ngIf="showSecondDropDown" class="skill-container-dropdown">
+                <div >
+                  <div class="options"   (click)="selectSecondValue(option)" *ngFor="let option of options |searchFilter: getSecondSearchValue()">
+                     {{option}}
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         
+            <div class="alert" *ngIf="SecondSkill.dirty||SecondSkill.touched" >
+               <div *ngIf="SecondSkill.invalid">
+                  Skill 2 is required.
+               </div>
+            </div>
+
+
+         <label class="info">Skill 3 <span>*</span></label>
+       
+            <div clickOutside (clickOutside)="closeThirdDropDown()">
+               <input type="text" 
+                     matInput 
+                     placeholder="Type and select from list"
+                     (click)="toggleThirdDropDown()"
+                     [(ngModel)]="thirdSkill"
+                     formControlName="ThirdSkill" >
+               <div *ngIf="showThirdDropDown" class="skill-container-dropdown">
+                  <div >
+                     <div class="options"  (click)="selectThirdValue(option)"  *ngFor="let option of options |searchFilter: getThirdSearchValue()">
+                        {{option}}
+                     </div>
+                  </div>
+               
+               </div>
+            </div>
+
+            <div class="alert" *ngIf="!myForm.controls['ThirdSkill'].valid && myForm.controls['ThirdSkill'].touched">
+               Skill 3 is required.
+            </div>
+
+            <div *ngIf="duplicateSkill" class="alert">
+               Error : Some Skill is selected twice
+            </div>
+
+   </form>
+   <input type="submit" class="button" (click)="submit()" value="Save Profile">
+</div>
+<router-outlet></router-outlet>
+
+
+ 
+ 

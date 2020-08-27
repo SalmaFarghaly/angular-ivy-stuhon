@@ -1,0 +1,155 @@
+:root{
+    --left-Padding:10%;
+    --right-Padding:10%;
+  }
+  
+  .container{
+    text-align: center;
+  }
+  ul{
+    list-style-type: none;
+    font-weight: bold;
+    margin-bottom: -1.5em;
+    padding: 0;
+  }
+  ul li{
+    display: inline;
+    float: left;
+  }
+  ul li a{
+    padding-left: 45px;
+  }
+  .firstParagraph{
+    color:#202124;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-weight: 400;
+    padding-right: 3em;
+  }
+  .man{
+    /* width:120%;
+    height: 100%;  */
+    padding-top: 138px;
+    padding-bottom: 0;
+    margin-bottom:0;
+  }
+  .firstDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    background-color: #F4F4F7;
+    padding-left: var(--left-Padding);
+    padding-right: var(--right-Padding); 
+    padding-left: 15%;
+    padding-right: 15%; 
+    height: 585px;
+  }
+  .first h1{
+    font-size: 2.6em;
+    padding-top: 1.2em;
+  
+  
+  }
+  span{
+    color:#0FA572;
+  }
+  .secondParagraph{
+  font-size: 1.1em;
+  font-weight: 410;
+  line-height: 1.6em;
+  margin-bottom: -1.3em;
+  padding-top: 20px;
+  }
+  .secondDiv{
+    padding-left: var(--left-Padding);
+    padding-right: var(--right-Padding); 
+    padding-left: 15%;
+    padding-right: 15%;   
+    margin-top: -2.2em;
+    background-color:#26547C;
+  }
+  .subhead{
+      padding-top: 1.5em;
+      color:white;
+      font-weight: 450;
+      font-size:2.5em;
+  }
+  button{
+    background-color:#0FA572;
+    font-weight: bold;
+    border: none;
+    margin-top: 1.2em;
+    margin-bottom:1.5em ;
+    color: white;
+    width: 70%;
+    height: 2.5em;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+  
+  }
+  .thirdDiv{
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--left-Padding);
+    padding-right: var(--right-Padding); 
+    padding-left: 15%;
+    padding-right: 15%;   
+    background-color: #EFF2F6;
+  }
+  .multiline {
+    white-space: pre-wrap;
+    word-wrap: break-word;  
+  }
+  .first{
+    text-align: left;
+    padding-top: 15%;
+  }
+  .third{
+    text-align: left;
+    padding-top: 5%;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding-bottom: 5%;
+  }
+  .mountain{
+    width:90%;
+    padding-bottom: 1.2em;
+  }
+  .thirdDiv h1{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+    
+  @media only screen and (max-width:800px){
+    .firstParagraph{
+        font-size: 0.9em;
+    }
+    .man{
+      width:50%;
+      padding-top:60px
+    }
+    .first h1{
+      font-size: 2em;
+    }
+    .secondParagraph{
+      font-size:0.9em;
+      margin-bottom: 10px;
+    }
+    .thirdDiv h1{
+      font-size: 1em;
+
+    }
+    .mountain{
+      width: 50%;
+    }
+    .subhead{
+      font-size: 1.3em;
+    }
+    button{
+      height:2em;
+      font-size:20px;
+    }
+}
+  
