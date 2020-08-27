@@ -62,7 +62,8 @@ export class ProfileComponent implements OnInit {
       {
         this.duplicateSkill=false;
        
-        if(this.firstName.length>=2&&this.firstName.length<=20&&this.lastName.length>=2&&this.lastName.length<=20){
+        if(this.firstName.length>=2&&this.firstName.length<=20&&this.lastName.length>=2&&this.lastName.length<=20&&this.firstSkill.length>0
+          &&this.secondSkill.length>0&&this.thirdSkill.length>0){
            this.validData=true;
           localStorage.setItem('firstName',this.firstName)
           localStorage.setItem('lastName',this.lastName)
