@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
   showSecondDropDown:boolean=false;
   showThirdDropDown:boolean=false;
   duplicateSkill:boolean=false;
+  validData:boolean=false;
 
   options:string[]=['Java', 'C++', 'Python', 'Matlab', 'Git', 'VsCode', 'DataStructure', 'Communication Skills'];
 
@@ -54,18 +55,23 @@ export class ProfileComponent implements OnInit {
     //Check if all fields are valid then save them in local storage
     if(this.firstSkill===this.secondSkill||this.secondSkill===this.thirdSkill||this.firstSkill===this.thirdSkill){
         this.duplicateSkill=true;
+        this.validData=false;
         return;
       }
     else
       {
         this.duplicateSkill=false;
+       
         if(this.firstName.length>=2&&this.firstName.length<=20&&this.lastName.length>=2&&this.lastName.length<=20){
+           this.validData=true;
           localStorage.setItem('firstName',this.firstName)
           localStorage.setItem('lastName',this.lastName)
           localStorage.setItem('firstSkill',this.firstSkill)
           localStorage.setItem('secondSkill',this.secondSkill)
           localStorage.setItem('thirdSkill',this.thirdSkill)
         }
+        else
+          this.validData=false;
 
       }
   }

@@ -119,6 +119,9 @@
             <div *ngIf="duplicateSkill" class="alert">
                Error : Some Skill is selected twice
             </div>
+            <div *ngIf="validData" class="success">
+               Your Data has been saved.
+            </div>
 
    </form>
    <input type="submit" class="button" (click)="submit()" value="Save Profile">

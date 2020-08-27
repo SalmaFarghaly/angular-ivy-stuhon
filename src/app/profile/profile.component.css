@@ -98,6 +98,16 @@ input.button{
     display: inline-block;
     animation: 2s alertAnim forwards;
 }
+  .sucess {
+    background:white;
+    color:green;
+    padding: 7px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    margin-left: 3.5em;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+}
 
 @keyframes alertAnim {
     from {
@@ -140,8 +150,14 @@ input.button{
     .alert{
       font-size:0.9em;
     }
+    .success{
+      font-size:0.9em;
+    }
     .skill-container-dropdown{
       margin-left:1.7em;
+    }
+    label.profile{
+      font-size:1.5em;
     }
 }
 
